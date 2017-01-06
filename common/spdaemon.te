@@ -27,7 +27,6 @@
 
 # spdaemon service
 type spdaemon, domain;
-
 type spdaemon_exec, exec_type, file_type;
 
 init_daemon_domain(spdaemon)
@@ -44,9 +43,6 @@ allow spdaemon sp_ssr_device:chr_file rw_file_perms;
 # Allow access to sp_keymaster device
 allow spdaemon sp_keymaster_device:chr_file rw_file_perms;
 
-# Allow access to cryptoapp device
-allow spdaemon cryptoapp_device:chr_file rw_file_perms;
-
 # Allow access to ion device
 allow spdaemon ion_device:chr_file rw_file_perms;
 
@@ -60,12 +56,5 @@ allow spdaemon spss_data_file:file r_file_perms;
 # Allow check SPSS Apps images stat()
 allow spdaemon spss_data_file:file getattr;
 
-# Allow get system info
-r_dir_file(spdaemon, sysfs)
-
-# Allow SPSS-PIL via Peripheral Manager
-binder_use(spdaemon)
-use_per_mgr(spdaemon)
-
-# Allow set/get prop to set/check if app is loaded
-set_prop(spdaemon, spcomlib_prop)
+# Allow set system prop
+allow spdaemon system_prop:property_service set;

@@ -1,2 +1,4 @@
-genfscon proc /asound/card0/state u:object_r:proc_audiod:s0
-genfscon proc /sys/vm/dirty_ratio  u:object_r:proc_dirty_ratio:s0
+genfscon proc /touchpanel    u:object_r:proc_touchpanel:s0
+genfscon proc /s1302         u:object_r:proc_touchpanel:s0
+genfscon proc /tri-state-key u:object_r:proc_touchpanel:s0
+genfscon proc /stat          u:object_r:proc_stat:s0
