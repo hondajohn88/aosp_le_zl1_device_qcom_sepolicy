@@ -1,6 +1,9 @@
 #must be defined for file_contexts
 type smd_test_exec, exec_type, file_type;
 
+#device type for smd device nodes, ie /dev/smd*
+type smd_device, dev_type;
+
 userdebug_or_eng(`
   type smd_test, domain, domain_deprecated;
   domain_auto_trans(shell, smd_test_exec, smd_test)

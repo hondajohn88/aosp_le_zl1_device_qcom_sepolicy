@@ -1,3 +1,13 @@
 #Define the files written during the operation of mm-pp-daemon
 type display_test_media_file, file_type, data_file_type;
 
+# Persist file types
+type persist_file, file_type;
+type persist_bluetooth_file, file_type;
+type persist_data_file, file_type;
+type persist_drm_file, file_type;
+type data_qsee_file, file_type;
+type seemp_file, file_type;
+
+
+

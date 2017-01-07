@@ -1,5 +1,6 @@
 #must be defined for file_contexts
 type qmi_test_service_exec, exec_type, file_type;
+type system_health_monitor_device, dev_type;
 
 userdebug_or_eng(`
   type qmi_test_service, domain, domain_deprecated;

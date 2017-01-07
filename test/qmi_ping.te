@@ -1,5 +1,8 @@
 #must be defined for file_contexts
 type qmi_ping_exec, exec_type, file_type;
+type smem_log_device, domain;
+type qmux, domain;
+type qmuxd_socket, file_type;
 
 userdebug_or_eng(`
   type qmi_ping, domain, domain_deprecated;

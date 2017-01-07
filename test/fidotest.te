@@ -1,5 +1,7 @@
 type fidotest, domain, domain_deprecated;
 type fidotest_exec, exec_type, file_type;
+type firmware_file, fs_type;
+type qsee_svc_app, domain;
 init_daemon_domain(fidotest)
 userdebug_or_eng(`
   #Allow fido test daemons to use Binder IPC
